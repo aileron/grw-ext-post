@@ -1,0 +1,22 @@
+{
+  "name": "Grow!PostExtion",
+  "version": "1.0",
+  "description": "Grow!にPostする為の拡張",
+  "icons": { "48": "icon_48x48.png",
+            "128": "icon_128x128.png" },
+  "background_page": "background.html",
+  "browser_action": {
+    "default_title": "Grow!",
+    "default_icon": "grow.ico"
+  },
+  "content_scripts": [
+  {
+     "matches": [ "http://*/*", "https://*/" ],
+     "js": ["content.js"]
+  } ],
+  "permissions": [
+    "http://*/",
+    "https://*/",
+    "tabs"
+  ]
+} 
