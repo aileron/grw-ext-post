@@ -1,6 +1,9 @@
-window.document.onkeydown = function(evt)
+window.document.onkeydown = function(e)
 {
-    if( evt.keyCode != 17)
+    var ctrl    = typeof e.modifiers == 'undefined' ? e.ctrlKey : e.modifiers & Event.CONTROL_MASK; 
+    var keycode = e.which;
+
+    if( ctrl==false || keycode != 71)
     {
         return;
     }
